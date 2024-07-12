@@ -9,9 +9,9 @@ export default function Card() {
     <div className="card">
       <img src={Avatar} alt="avatar img" />
       <h2>{user.name || "John Doe"}</h2>
-      <h3>{user.location}</h3>
+      <h3>{user.location || "Lagos, Nigeria"}</h3>
 
-      <p>{user.description}</p>
+      <p>{user.description|| "Front-end Web Developer"}</p>
 
       <ul>
         {user.links.map((link, index) => {
