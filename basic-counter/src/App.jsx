@@ -1,19 +1,19 @@
 import { useState } from "react";
 
 function App() {
-  const [num, setNum] = useState(0);
+  const [count, setCount] = useState(0);
 
   function decrement() {
-    setNum((prevNum) => prevNum - 1);
+    setCount((prevCount) => prevCount - 1);
   }
 
   function increment() {
-    setNum((prevValue) => prevValue + 1);
+    setCount((prevCount) => prevCount + 1);
   }
 
   return (
     <>
-      <p data-num>{num}</p>
+      <p data-num>{count}</p>
       <button data-decrement onClick={decrement}>
         decrement
       </button>
