@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --font: "Overpass", sans-serif;
+  --grayish: hsl(216, 12%, 23%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font);
+  background-color: var(--very-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.7rem;
+  color: var(--white);
+  margin-top: 1.8rem;
+}
+
+button, label {
+  cursor: pointer;
+}
+
+p,
+label {
+  line-height: 1.5;
+  display: block;
+  color: var(--light-grey);
+}
+
+p {
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#root {
+    background-color: var(--dark-blue);
+    /* min-width: 20rem;
+    width: calc(100% - 40px);
+    max-width: 25rem; */
+    width: clamp(20rem, 100% - 40px, 25rem);
+    border-radius: 2rem;
+    padding: 2.7rem;
+}
+
+.star {
+    background-color: var(--grayish);
+    width: fit-content;
+    border-radius: 50%;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ratings {
+    margin-top: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.rating label {
+    background-color: var(--grayish);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating label:hover {
+    background-color: var(--orange);
+    color: white;
+}
+
+.rating input[type="radio"]:checked + label {
+    background-color: var(--white);
+    color: black;
+}
+
+.btn {
+    display: block;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    margin-top: 1.5rem;
+    background-color: var(--orange);
+    border-radius: 2rem;
+    padding: .8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.pos {
+    width: fit-content;
+    margin: auto;
+}
+
+.result {
+    background-color: var(--grayish);
+    width: fit-content;
+    margin: auto;
+    margin-top: .5rem;
+    color: var(--orange);
+    padding: .5rem 1.5rem;
+    border-radius: 3rem;
+}
+
+.error {
+  color: red;
+}
+
+.return {
+  cursor: pointer;
+  background-color: var(--grayish);
+  width: fit-content;
+  border-radius: 50%;
+  padding: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange);
+}
+
+.return:hover {
+  background-color: var(--white);
+  color: var(--very-dark-blue);
+}
