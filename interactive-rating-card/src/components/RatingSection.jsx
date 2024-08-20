@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import star from "../assets/icon-star.svg";
 import Rating from "./Rating";

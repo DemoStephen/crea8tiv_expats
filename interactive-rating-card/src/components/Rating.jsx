@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 export default function Rating({ value, onSelectRating }) {
   return (
     <div className="rating">
