@@ -8,10 +8,6 @@ export default function RatingSection({ onSelectedRating }) {
 
   const ratingValues = [1, 2, 3, 4, 5];
 
-  function handleChange(value) {
-    setSelectedRating(value);
-  }
-
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -39,7 +35,7 @@ export default function RatingSection({ onSelectedRating }) {
           {ratingValues.map((ratingValue) => (
             <Rating
               key={ratingValue}
-              onSelectRating={handleChange}
+              onSelectRating={(value) => setSelectedRating(value)}
               value={ratingValue}
             />
           ))}
