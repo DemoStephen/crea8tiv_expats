@@ -1,0 +1,30 @@
+.div {
+    display: inline-block;
+    width: 45%;
+}
+
+.div + .div {
+    margin-left: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+  color: #9bafaf;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  max-width: 15rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #758a8a;
+  background-color: #869999;
+  color: #142020;
+  margin-top: 10px;
+}
