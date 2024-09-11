@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="app.css" />
+
+    <title>Frontend Mentor | Product list with cart</title>
+    <script defer src="app.js"></script>
+  </head>
+  <body class="body">
+    <main class="main">
+      <section class="desserts">
+        <h1 class="desserts-header">Desserts</h1>
+        <div>
+          <article data-dessert class="dessert">
+            <figure>
+              <img
+                data-dessert-image
+                class="dessert-image"
+                src="./assets/images/image-waffle-mobile.jpg"
+                alt="Waffle"
+              />
+              <button
+                data-add-to-cart-btn
+                class="dessert-cart-btn"
+                type="button"
+              >
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <span>Add to Cart</span>
+              </button>
+              <div
+                data-quantity-control
+                class="dessert-quantity-control d-none"
+              >
+                <button data-decrement class="dessert-decrement" type="button">
+                  -
+                </button>
+                <p data-quantity class="dessert-quantity">1</p>
+                <button data-increment class="dessert-increment" type="button">
+                  +
+                </button>
+              </div>
+              <figcaption>Waffle</figcaption>
+            </figure>
+
+            <p class="dessert-title" data-dessert-title="Waffle">
+              Waffle with Berries
+            </p>
+            <p class="dessert-price" data-dessert-price="6.5">$6.50</p>
+          </article>
+
+          <article data-dessert class="dessert">
+            <figure>
+              <img
+                data-dessert-image
+                class="dessert-image"
+                src="./assets/images/image-creme-brulee-mobile.jpg"
+                alt="Crème Brûlée "
+              />
+              <button
+                data-add-to-cart-btn
+                class="dessert-cart-btn"
+                type="button"
+              >
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <span>Add to Cart</span>
+              </button>
+              <div
+                data-quantity-control
+                class="dessert-quantity-control d-none"
+              >
+                <button data-decrement class="dessert-decrement" type="button">
+                  -
+                </button>
+                <p data-quantity class="dessert-quantity">1</p>
+                <button data-increment class="dessert-increment" type="button">
+                  +
+                </button>
+              </div>
+              <figcaption>Crème Brûlée</figcaption>
+            </figure>
+
+            <p class="dessert-title" data-dessert-title="Crème Brûlée">
+              Vanilla Bean Crème Brûlée
+            </p>
+            <p class="dessert-price" data-dessert-price="7">$7.00</p>
+          </article>
+
+          <article data-dessert class="dessert">
+            <figure>
+              <img
+                data-dessert-image
+                class="dessert-image"
+                src="./assets/images/image-macaron-mobile.jpg"
+                alt="Macaron"
+              />
+              <button
+                data-add-to-cart-btn
+                class="dessert-cart-btn"
+                type="button"
+              >
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <span>Add to Cart</span>
+              </button>
+              <div
+                data-quantity-control
+                class="dessert-quantity-control d-none"
+              >
+                <button data-decrement class="dessert-decrement" type="button">
+                  -
+                </button>
+                <p data-quantity class="dessert-quantity">1</p>
+                <button data-increment class="dessert-increment" type="button">
+                  +
+                </button>
+              </div>
+              <figcaption>Macaron</figcaption>
+            </figure>
+
+            <p class="dessert-title" data-dessert-title="Macaron">
+              Macaron Mix of Five
+            </p>
+            <p class="dessert-price" data-dessert-price="8">$8.00</p>
+          </article>
+
+          <article data-dessert class="dessert">
+            <figure>
+              <img
+                data-dessert-image
+                class="dessert-image"
+                src="./assets/images/image-tiramisu-mobile.jpg"
+                alt="Tiramisu"
+              />
+              <button
+                data-add-to-cart-btn
+                class="dessert-cart-btn"
+                type="button"
+              >
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <span>Add to Cart</span>
+              </button>
+              <div
+                data-quantity-control
+                class="dessert-quantity-control d-none"
+              >
+                <button data-decrement class="dessert-decrement" type="button">
+                  -
+                </button>
+                <p data-quantity class="dessert-quantity">1</p>
+                <button data-increment class="dessert-increment" type="button">
+                  +
+                </button>
+              </div>
+              <figcaption>Tiramisu</figcaption>
+            </figure>
+
+            <p class="dessert-title" data-dessert-title="Classic Tiramisu">
+              Classic Tiramisu
+            </p>
+            <p class="dessert-price" data-dessert-price="5.5">$5.50</p>
+          </article>
+
+          <article data-dessert class="dessert">
+            <figure>
+              <img
+                data-dessert-image
+                class="dessert-image"
+                src="./assets/images/image-baklava-mobile.jpg"
+                alt="baklava"
+              />
+              <button
+                data-add-to-cart-btn
+                class="dessert-cart-btn"
+                type="button"
+              >
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <span>Add to Cart</span>
+              </button>
+              <div
+                data-quantity-control
+                class="dessert-quantity-control d-none"
+              >
+                <button data-decrement class="dessert-decrement" type="button">
+                  -
+                </button>
+                <p data-quantity class="dessert-quantity">1</p>
+                <button data-increment class="dessert-increment" type="button">
+                  +
+                </button>
+              </div>
+              <figcaption>Baklava</figcaption>
+            </figure>
+
+            <p class="dessert-title" data-dessert-title="Pistachio Baklava">
+              Pistachio Baklava
+            </p>
+            <p class="dessert-price" data-dessert-price="4">$4.00</p>
+          </article>
+
+          <article data-dessert class="dessert">
+            <figure>
+              <img
+                data-dessert-image
+                class="dessert-image"
+                src="./assets/images/image-meringue-mobile.jpg"
+                alt="Pie"
+              />
+              <button
+                data-add-to-cart-btn
+                class="dessert-cart-btn"
+                type="button"
+              >
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <span>Add to Cart</span>
+              </button>
+              <div
+                data-quantity-control
+                class="dessert-quantity-control d-none"
+              >
+                <button data-decrement class="dessert-decrement" type="button">
+                  -
+                </button>
+                <p data-quantity class="dessert-quantity">1</p>
+                <button data-increment class="dessert-increment" type="button">
+                  +
+                </button>
+              </div>
+              <figcaption>Pie</figcaption>
+            </figure>
+
+            <p class="dessert-title" data-dessert-title="Pistachio Baklava">
+              Lemon Meringue Pie
+            </p>
+            <p class="dessert-price" data-dessert-price="4">$5.00</p>
+          </article>
+
+          <article data-dessert class="dessert">
+            <figure>
+              <img
+                data-dessert-image
+                class="dessert-image"
+                src="./assets/images/image-cake-mobile.jpg"
+                alt="cake"
+              />
+              <button
+                data-add-to-cart-btn
+                class="dessert-cart-btn"
+                type="button"
+              >
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <span>Add to Cart</span>
+              </button>
+              <div
+                data-quantity-control
+                class="dessert-quantity-control d-none"
+              >
+                <button data-decrement class="dessert-decrement" type="button">
+                  -
+                </button>
+                <p data-quantity class="dessert-quantity">1</p>
+                <button data-increment class="dessert-increment" type="button">
+                  +
+                </button>
+              </div>
+              <figcaption>Cake</figcaption>
+            </figure>
+
+            <p class="dessert-title" data-dessert-title="Red Velvet Cake">
+              Red Velvet Cake
+            </p>
+            <p class="dessert-price" data-dessert-price="4.5">$4.50</p>
+          </article>
+
+          <article data-dessert class="dessert">
+            <figure>
+              <img
+                data-dessert-image
+                class="dessert-image"
+                src="./assets/images/image-brownie-mobile.jpg"
+                alt="brownie"
+              />
+              <button
+                data-add-to-cart-btn
+                class="dessert-cart-btn"
+                type="button"
+              >
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <span>Add to Cart</span>
+              </button>
+              <div
+                data-quantity-control
+                class="dessert-quantity-control d-none"
+              >
+                <button data-decrement class="dessert-decrement" type="button">
+                  -
+                </button>
+                <p data-quantity class="dessert-quantity">1</p>
+                <button data-increment class="dessert-increment" type="button">
+                  +
+                </button>
+              </div>
+              <figcaption>Brownie</figcaption>
+            </figure>
+
+            <p
+              class="dessert-title"
+              data-dessert-title="Salted Caramel Brownie"
+            >
+              Salted Caramel Brownie
+            </p>
+            <p class="dessert-price" data-dessert-price="5.5">$5.50</p>
+          </article>
+
+          <article data-dessert class="dessert">
+            <figure>
+              <img
+                data-dessert-image
+                class="dessert-image"
+                src="./assets/images/image-panna-cotta-mobile.jpg"
+                alt="Panna Cotta"
+              />
+              <button
+                data-add-to-cart-btn
+                class="dessert-cart-btn"
+                type="button"
+              >
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="add to cart"
+                />
+                <span>Add to Cart</span>
+              </button>
+              <div
+                data-quantity-control
+                class="dessert-quantity-control d-none"
+              >
+                <button data-decrement class="dessert-decrement" type="button">
+                  -
+                </button>
+                <p data-quantity class="dessert-quantity">1</p>
+                <button data-increment class="dessert-increment" type="button">
+                  +
+                </button>
+              </div>
+              <figcaption>Panna Cotta</figcaption>
+            </figure>
+
+            <p class="dessert-title" data-dessert-title="Panna Cotta">
+              Vanilla Panna Cotta
+            </p>
+            <p class="dessert-price" data-dessert-price="6.5">$6.50</p>
+          </article>
+        </div>
+      </section>
+
+      <aside data-cart class="cart">
+        <h1>Your Cart<span data-items-sum>(0)</span></h1>
+
+        <div data-empty>
+          <img src="./assets/images/illustration-empty-cart.svg" alt="" />
+          <p>Your added items will appear here</p>
+        </div>
+
+        <div data-cart-orders class="cart-orders d-none">
+          <div data-cart-items class="cart-items">
+            <div class="cart-item">
+              <p>
+                <span class="cart-item-title"> Classic Tiramisu </span>
+                <span class="cart-item-flex">
+                  <span class="cart-item-quantity">1x</span>
+                  <span class="cart-item-price">@$5.50</span>
+                  <span class="cart-item-sum">$5.50</span>
+                </span>
+              </p>
+              <button type="button">
+                <img src="./assets/images/icon-remove-item.svg" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div data-cart-footer class="cart-footer">
+            <p class="cart-order-total">
+              <span>Order Total</span>
+              <span data-price-total class="cart-footer-total">$00.00</span>
+            </p>
+            <p class="carbon-neutral">
+              <img src="./assets/images/icon-carbon-neutral.svg" alt="" />
+              <span>This is a <strong>carbon-neutral</strong> delivery</span>
+            </p>
+            <button data-confirm-btn type="button">Confirm Order</button>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <dialog data-modal class="dialog">
+      <img
+        src="./assets/images/icon-order-confirmed.svg"
+        alt="green checkmark"
+      />
+      <h1 class="dialog-header">Order Confirmed</h1>
+      <p class="dialog-text">We hope you enjoy your food!</p>
+
+      <div class="receipt" data-receipt>
+        <div class="receipt-item">
+          <div class="receipt-block">
+            <img src="./assets/images/image-tiramisu-mobile.jpg" alt="tiramisu" />
+            <p class="receipt-flex">
+              <span class="receipt-title">Classic Tiramisu</span>
+              <span class="receipt-flex2">
+                <span class="receipt-quantity">1x</span>
+                <span class="receipt-price">@$5.50</span>
+              </span>
+            </p>
+          </div>
+          <p class="receipt-sum">$5.50</p>
+        </div>
+      </div>
+      <p class="dialog-order-total">
+        <span>Order Total</span>
+        <span data-total class="dialog-sum">$00.00</span>
+      </p>
+
+      <button data-reset type="button">start new order</button>
+    </dialog>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
