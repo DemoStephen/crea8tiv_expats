@@ -192,6 +192,7 @@ function reset() {
     dessert.querySelector("[data-quantity]").innerText = 1;
   }
 
-  modal.close()
+  modal.close();
 }
 resetButton.addEventListener("click", reset);
+modal.addEventListener("close", reset);
