@@ -10,6 +10,7 @@ const receipt = document.querySelector("[data-receipt]");
 const receiptTotal = document.querySelector("[data-total]");
 const resetButton = document.querySelector("[data-reset]");
 
+// stores [{title, price, quantity, imgSrc}]
 let orders = [];
 
 for (const dessert of desserts) {
