@@ -1,4 +1,5 @@
-const desserts = document.querySelectorAll("[data-dessert]");
+const desserts = Array.from(document.querySelectorAll("[data-dessert]"));
+// const desserts = document.querySelectorAll("[data-dessert]");
 const itemSum = document.querySelector("[data-items-sum]");
 const emptyCartState = document.querySelector("[data-empty]");
 const cartOrders = document.querySelector("[data-cart-orders]");
@@ -135,20 +136,34 @@ function deleteItem(title) {
   orders = [...newOrders];
   updateCart();
 
-  for (const dessert of desserts) {
-    const addToCartBtn = dessert.querySelector("[data-add-to-cart-btn]");
-    const quantityControl = dessert.querySelector("[data-quantity-control]");
-    const quantity = dessert.querySelector("[data-quantity]");
+  const dessertItem = desserts.find((dessert) => {
     const dessertTitle = dessert
       .querySelector("[data-dessert-title]")
       .dataset.dessertTitle.trim();
 
-    if (title === dessertTitle) {
-      addToCartBtn.classList.remove("d-none");
-      quantityControl.classList.add("d-none");
-      quantity.innerText = "1";
-    }
-  }
+    return title === dessertTitle;
+  });
+
+  dessertItem
+    .querySelector("[data-add-to-cart-btn]")
+    .classList.remove("d-none");
+  dessertItem.querySelector("[data-quantity-control]").classList.add("d-none");
+  dessertItem.querySelector("[data-quantity]").innerText = "1";
+
+  // for (const dessert of desserts) {
+  //   const addToCartBtn = dessert.querySelector("[data-add-to-cart-btn]");
+  //   const quantityControl = dessert.querySelector("[data-quantity-control]");
+  //   const quantity = dessert.querySelector("[data-quantity]");
+  //   const dessertTitle = dessert
+  //     .querySelector("[data-dessert-title]")
+  //     .dataset.dessertTitle.trim();
+
+  //   if (title === dessertTitle) {
+  //     addToCartBtn.classList.remove("d-none");
+  //     quantityControl.classList.add("d-none");
+  //     quantity.innerText = "1";
+  //   }
+  // }
 }
 
 function displayReceipt() {
@@ -184,16 +199,34 @@ function displayReceipt() {
 confirmOrderBtn.addEventListener("click", displayReceipt);
 
 function reset() {
+  for (const order of orders) {
+    const dessertItem = desserts.find((dessert) => {
+      const dessertTitle = dessert
+        .querySelector("[data-dessert-title]")
+        .dataset.dessertTitle.trim();
+
+      return order.title === dessertTitle;
+    });
+
+    if (dessertItem) {
+      dessertItem
+        .querySelector("[data-add-to-cart-btn]")
+        .classList.remove("d-none");
+      dessertItem.querySelector("[data-quantity-control]").classList.add("d-none");
+      dessertItem.querySelector("[data-quantity]").innerText = 1;
+    }
+  }
+
   orders = [];
   updateCart();
 
-  for (const dessert of desserts) {
-    dessert.querySelector("[data-add-to-cart-btn]").classList.remove("d-none");
-    dessert.querySelector("[data-quantity-control]").classList.add("d-none");
-    dessert.querySelector("[data-quantity]").innerText = 1;
-  }
-
   modal.close();
+
+  // for (const dessert of desserts) {
+  //   dessert.querySelector("[data-add-to-cart-btn]").classList.remove("d-none");
+  //   dessert.querySelector("[data-quantity-control]").classList.add("d-none");
+  //   dessert.querySelector("[data-quantity]").innerText = 1;
+  // }
 }
 resetButton.addEventListener("click", reset);
 modal.addEventListener("close", reset);

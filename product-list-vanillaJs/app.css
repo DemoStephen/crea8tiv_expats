@@ -326,6 +326,7 @@ textarea:not([rows]) {
 }
 
 ::backdrop {
+  background: black;
   opacity: 0.75;
 }
 
@@ -437,8 +438,9 @@ textarea:not([rows]) {
   cursor: pointer;
 }
 
-.dialog button:hover,
-.dialog button:focus {
+.dialog button:hover
+/* ,.dialog button:focus */
+ {
   background-color: var(--rose-100);
   color: var(--rose-900);
 }
@@ -450,6 +452,7 @@ textarea:not([rows]) {
 
   .dialog {
     margin-bottom: auto;
+    border-radius: 15px;
   }
 }
 
