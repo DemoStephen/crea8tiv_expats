@@ -208,13 +208,13 @@ function reset() {
       return order.title === dessertTitle;
     });
 
-    if (dessertItem) {
-      dessertItem
-        .querySelector("[data-add-to-cart-btn]")
-        .classList.remove("d-none");
-      dessertItem.querySelector("[data-quantity-control]").classList.add("d-none");
-      dessertItem.querySelector("[data-quantity]").innerText = 1;
-    }
+    dessertItem
+      .querySelector("[data-add-to-cart-btn]")
+      .classList.remove("d-none");
+    dessertItem
+      .querySelector("[data-quantity-control]")
+      .classList.add("d-none");
+    dessertItem.querySelector("[data-quantity]").innerText = 1;
   }
 
   orders = [];
