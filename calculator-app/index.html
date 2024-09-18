@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+    <link rel="stylesheet" href="app.css">
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <main class="main">
+      <header class="header">
+        <h3 class="header-title">calc</h3>
+        <div class="header-theme-control">
+          <p class="header-theme-text">THEME</p>
+          <div class="header-theme-controller">
+            <p>
+              <span data-theme="">1</span>
+              <span data-theme="">2</span>
+              <span data-theme="">3</span>
+            </p>
+            <div class="header-theme-indicator">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="screen">
+        <p class="previous-operand" data-prev-operand></p>
+        <p class="current-operand" data-current-operand></p>
+      </section>
+      <section class="keypad">
+        <button type="button" data-number="7">7</button>
+        <button type="button" data-number="8">8</button>
+        <button type="button" data-number="9">9</button>
+        <button type="button" data-delete class="del">DEL</button>
+        <button type="button" data-number="4">4</button>
+        <button type="button" data-number="5">5</button>
+        <button type="button" data-number="6">6</button>
+        <button type="button" data-operator="+">+</button>
+        <button type="button" data-number="1">1</button>
+        <button type="button" data-number="2">2</button>
+        <button type="button" data-number="3">3</button>
+        <button type="button" data-operator="-">-</button>
+        <button type="button" data-number=".">.</button>
+        <button type="button" data-number="0">0</button>
+        <button type="button" data-operator="/">/</button>
+        <button type="button" data-operator="x">x</button>
+        <button type="button" data-reset class="span-2 reset">RESET</button>
+        <button type="button" class="span-2 equals" data-equals>=</button>
+      </section>
+    </main>
+  </body>
+</html>

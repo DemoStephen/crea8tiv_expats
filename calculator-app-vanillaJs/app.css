@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+:root {
+  /* theme 1 */
+  /* backgrounds */
+  /* main background */
+  --theme-1-main-bg: hsl(222, 26%, 31%);
+  --theme-1-keypad-bg: hsl(223, 31%, 20%);
+  --theme-1-screen-bg: hsl(224, 36%, 15%);
+
+  /* keys */
+  --theme-1-keys-bg: hsl(225, 21%, 49%);
+  --theme-1-keys-bg-hover: hsla(225, 21%, 49%, 0.578);
+  --theme-1-key-shadow: hsl(224, 28%, 35%);
+  --theme-1-red: hsl(6, 63%, 50%);
+  --theme-1-dark-red: hsl(6, 70%, 34%);
+  --theme-1-light-orange: hsl(30, 25%, 89%);
+  --theme-1-grayish-orange: hsl(28, 16%, 65%);
+
+  /* text */
+  --theme-1-text-blue: hsl(221, 14%, 31%);
+  --theme-1-text-white: hsl(0, 0%, 100%);
+
+  /* theme 2 */
+  /* backgrounds */
+  /* main background */
+  --theme-2-main-bg: hsl(0, 0%, 90%);
+  --theme-2-keypad-bg: hsl(0, 5%, 81%);
+  --theme-2-screen-bg: hsl(0, 0%, 93%);
+
+  /* keys */
+  --theme-2-keys-bg: hsl(185, 42%, 37%);
+  --theme-2-key-shadow: hsl(185, 58%, 25%);
+  --theme-2-orange: hsl(25, 98%, 40%);
+  --theme-2-dark-orange: hsl(25, 99%, 27%);
+  --theme-2-light-yellow: hsl(45, 7%, 89%);
+  --theme-2-grayish-orange: hsl(35, 11%, 61%);
+
+  /* text */
+  --theme-2-text-yellow: hsl(60, 10%, 19%);
+  --theme-2-text-white: hsl(0, 0%, 100%);
+
+  /* theme 3 */
+  /* backgrounds */
+  /* main background */
+  --theme-3-main-bg: hsl(268, 75%, 9%);
+  --theme-3-keypad-bg: hsl(268, 71%, 12%);
+  --theme-3-screen-bg: hsl(268, 71%, 12%);
+
+  /* keys */
+  --theme-3-keys-bg: hsl(281, 89%, 26%);
+  --theme-3-key-shadow: hsl(285, 91%, 52%);
+  --theme-3-pure-cyan: hsl(176, 100%, 44%);
+  --theme-3-soft-cyan: hsl(177, 92%, 70%);
+  --theme-3-dark-violet: hsl(268, 47%, 21%);
+  --theme-3-dark-magenta: hsl(290, 70%, 36%);
+
+  /* text */
+  --theme-3-text-yellow: hsl(52, 100%, 62%);
+  --theme-3-text-blue: hsl(198, 20%, 13%);
+  --theme-3-text-white: hsl(0, 0%, 100%);
+
+  --league-spartan: "League Spartan", sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: var(--rose-100);
+  font-family: var(--red-hat);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: var(--league-spartan);
+  font-weight: 700;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: var(--theme-1-main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: clamp(21rem, 100% - 50px, 31.25rem)
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  color: white;
+}
+
+.header-title {
+  font-size: 1.5rem;
+}
+
+.header-theme-control {
+  display: flex;
+  gap: 3rem
+}
+
+.header-theme-controller {
+  width: 5rem;
+}
+
+.header-theme-controller > p {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-theme-indicator {
+  width: 100%;
+  background-color: var(--theme-1-keypad-bg);
+  height: 1.5rem;
+  border-radius: 9999px;
+  padding: .8rem .25rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.header-theme-indicator > div {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--theme-1-dark-red);
+}
+
+.screen {
+  margin-top: 1.2rem;
+  width: 100;
+  background-color: var(--theme-1-screen-bg);
+  height: 6rem;
+  border-radius: 1rem;
+  text-align: right;
+  padding: 1rem;
+}
+
+.previous-operand, .current-operand {
+    color: white;
+}
+
+.previous-operand {
+  opacity: .5;
+}
+
+.current-operand {
+  font-size: 2rem;
+}
+
+.keypad {
+  background-color: var(--theme-1-keypad-bg);
+  padding: 1rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+button {
+  font-size: 1.8rem;
+  padding: .8rem;
+  border: 0;
+  border-radius: .5rem;
+  background-color: var(--theme-1-light-orange);
+  box-shadow: 0 4px var(--theme-1-grayish-orange);
+  transition: all .2s linear;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.reset, .del {
+  background-color: var(--theme-1-keys-bg);
+  color: white;
+  box-shadow: 0 5px var(--theme-1-key-shadow);
+}
+
+.equals {
+  color: white;
+  background-color: var(--theme-1-red);
+  box-shadow: 0 4px var(--theme-1-dark-red);
+}
+
+button:hover {
+  box-shadow: none;
+}
