@@ -18,7 +18,9 @@ function updateScreen() {
     prevExpression.innerText = `${operandsAndOperators.previousOperand} ${operandsAndOperators.operator}`;
   } else if (operandsAndOperators.previousOperand.includes("=")) {
     prevExpression.innerText = operandsAndOperators.previousOperand;
-  } else prevExpression.innerText = "";
+  } else {
+    prevExpression.innerText = "";
+  }
 
   currentExpression.innerText = operandsAndOperators.currentOperand;
 }

@@ -213,7 +213,7 @@ body {
   background-color: var(--theme-1-keypad-bg);
   height: 1.5rem;
   border-radius: 9999px;
-  padding: .8rem .25rem;
+  padding: .8rem .4rem;
   display: flex;
   justify-content: start;
   align-items: center;
