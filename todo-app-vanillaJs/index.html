@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="app.css" />
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <picture data-picture="">
+      <source
+        srcset="./images/bg-desktop-dark.jpg"
+        media="(min-width: 37.5rem)"
+        data-source
+      />
+      <img data-img src="./images/bg-mobile-dark.jpg" alt="background image" />
+    </picture>
+    <!-- <picture data-picture="">
+      <source
+        srcset="./images/bg-desktop-light.jpg"
+        media="(min-width: 37.5rem)"
+        data-source
+      />
+      <img data-img src="./images/bg-mobile-light.jpg" alt="background image" />
+    </picture> -->
+    <main class="main">
+      <div class="container">
+        <header class="header">
+          <h1 class="header-title">TODO</h1>
+          <button class="theme-controller" data-theme-controller></button>
+        </header>
+
+        <form action="#" class="form" data-form>
+          <input
+            class="form-checkbox"
+            type="checkbox"
+            id="form-checkbox"
+            name="form-checkbox"
+            data-form-checkbox
+          />
+          <label for="form-checkbox"></label>
+          <input
+            type="text"
+            class="form-text-input"
+            name="form-input"
+            data-form-text-input
+            placeholder="Create a new todo..."
+          />
+        </form>
+
+        <section class="list-items-container">
+          <ul class="list-items" data-list-items></ul>
+          <footer class="footer">
+            <p data-items-count>0 items left</p>
+            <div class="items-display-mode">
+              <button class="active" data-all-items-btn>All</button>
+              <button data-active-items-btn="">Active</button>
+              <button data-completed-items-btn>Completed</button>
+            </div>
+            <button data-delete-completed>Clear Completed</button>
+          </footer>
+        </section>
+      </div>
+    </main>
+
+    <script defer src="app.js"></script>
+  </body>
+</html>

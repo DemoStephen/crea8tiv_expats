@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --josefin-sans: "Josefin Sans", sans-serif;
+  /* primary */
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  /* ### Dark Theme */
+
+  --very-dark-blue: hsl(235, 21%, 11%);
+  --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --light-grayish-blue: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue-hover: hsl(237, 14%, 26%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  font-family: var(--josefin-sans);
+  font-size: 1.125rem;
+  font-optical-sizing: auto;
+  font-style: normal;
+  position: relative;
+  background-color: var(--very-dark-blue);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.main {
+  z-index: 1;
+  color: var(--light-grayish-blue);
+  min-height: 100vh;
+}
+
+picture {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+picture > * {
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+}
+
+.container {
+  width: clamp(27rem, 100% - 50px, 37.5rem);
+  margin-inline: auto;
+  margin-top: 5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  letter-spacing: 15px;
+  color: white;
+}
+
+.theme-controller {
+  width: 26px;
+  height: 26px;
+  background-image: url(./images/icon-sun.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
+}
+
+.form {
+  margin-top: 2rem;
+  background-color: var(--very-dark-desaturated-blue);
+  border: 0;
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.form-checkbox {
+  position: absolute;
+  display: none;
+}
+
+.form-checkbox:checked + label {
+  border: 0;
+  background-image: url(./images/icon-check.svg), var(--check-background);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form label {
+  cursor: pointer;
+  display: block;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 50%;
+  border: 1px solid var(--dark-grayish-blue);
+}
+
+.form-text-input {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  padding-top: 0.5rem;
+}
+
+.list-items-container {
+  background-color: var(--very-dark-desaturated-blue);
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.list-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list-item {
+  position: relative;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--dark-grayish-blue);
+}
+
+.list-item input {
+  position: absolute;
+  display: none;
+}
+
+.list-item label {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.list-item-checkbox {
+  cursor: pointer;
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 9999px;
+  border: 1px solid var(--dark-grayish-blue);
+}
+
+.list-item > input:checked + label > .list-item-checkbox {
+  border: 0;
+  background-image: url(./images/icon-check.svg), var(--check-background);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.list-item-title {
+  margin-top: 0.42rem;
+}
+
+.list-item-title.checked {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.list-item-button {
+  background: none;
+  border: 0;
+  display: block;
+  outline: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.list-item-button > img {
+  object-fit: cover;
+}
+
+.footer {
+  padding: 1.5rem 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--dark-grayish-blue);
+}
+
+.footer button {
+  background: none;
+  border: 0;
+  outline: 0;
+}
+
+.items-display-mode {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  /* background-color: var(--very-dark-desaturated-blue); */
+  background-color: inherit;
+  border-radius: 8px;
+}
+
+.items-display-mode button.active {
+  color: var(--bright-blue);
+}
+
+/* light theme */
+
+.light {
+  --very-light-gray: hsl(0, 0%, 98%);
+  --very-light-grayish-blue: hsl(236, 33%, 92%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+}
+
+body.light {
+  background-color: var(--very-light-gray);
+}
+
+.light .theme-controller {
+  background-image: url(./images/icon-moon.svg);
+}
+
+.light .form {
+  background-color: var(--very-light-gray);
+  box-shadow: 0 1px 30px var(--very-dark-grayish-blue);
+}
+
+.light .form-text-input {
+  color: var(--very-dark-blue);
+}
+
+.light .list-items-container {
+  background-color: var(--very-light-gray);
+  box-shadow: 0 1px 30px var(--very-dark-grayish-blue);
+}
+
+.light .list-item-title {
+  color: var(--very-dark-blue);
+}
+
+.light .list-item-title.checked {
+  color: var(--dark-grayish-blue);
+}
+
+.light .items-display-mode {
+  box-shadow: 0 1px 30px var(--very-dark-grayish-blue);
+}
